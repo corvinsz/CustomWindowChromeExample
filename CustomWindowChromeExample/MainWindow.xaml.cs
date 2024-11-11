@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using CustomWindowChromeExample.Styles;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -13,10 +14,10 @@ namespace CustomWindowChromeExample;
 /// <summary>
 /// Interaction logic for MainWindow.xaml
 /// </summary>
-public partial class MainWindow : Window
+public partial class MainWindow : CustomChromeWindow
 {
-    public MainWindow()
-    {
-        InitializeComponent();
-    }
+	public MainWindow()
+	{
+		InitializeComponent();
+	}
 }
