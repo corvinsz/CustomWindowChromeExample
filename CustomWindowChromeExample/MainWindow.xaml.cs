@@ -19,5 +19,7 @@ public partial class MainWindow : CustomChromeWindow
 	public MainWindow()
 	{
 		InitializeComponent();
+		this.Icon = new BitmapImage(new Uri("C:\\Git\\C#\\Desktop\\CustomWindowChromeExample\\CustomWindowChromeExample\\favicon.ico"));
+		var idk = Icon.GetType().ToString();
 	}
 }
