@@ -10,6 +10,16 @@
                            Height="450"
                            Background="#303030"
                            mc:Ignorable="d">
+    <styles:CustomChromeWindow.TitlebarContent>
+        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+            <Button Click="Button_Click"
+                    Content="Login"
+                    WindowChrome.IsHitTestVisibleInChrome="True" />
+            <Button Click="Button_Click"
+                    Content="Settings"
+                    WindowChrome.IsHitTestVisibleInChrome="True" />
+        </StackPanel>
+    </styles:CustomChromeWindow.TitlebarContent>
     <Grid>
         <TextBlock HorizontalAlignment="Center"
                    VerticalAlignment="Center"
