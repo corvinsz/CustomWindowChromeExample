@@ -17,6 +17,9 @@
             <Button Click="Button_Click"
                     Content="Settings"
                     WindowChrome.IsHitTestVisibleInChrome="True" />
+            <Button Click="Theme_Click"
+                    Content="Theme"
+                    WindowChrome.IsHitTestVisibleInChrome="True" />
         </StackPanel>
     </local:CustomChromeWindow.TitlebarContent>
     <Grid>

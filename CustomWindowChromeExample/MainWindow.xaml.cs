@@ -15,9 +15,14 @@ namespace CustomWindowChromeExample;
 /// </summary>
 public partial class MainWindow : CustomChromeWindow
 {
+	private readonly Brush _initialTitlebarBackground;
+
 	public MainWindow()
 	{
 		InitializeComponent();
+
+		_initialTitlebarBackground = this.TitlebarBackground;
+
 		string iconPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "favicon.ico");
 		this.Icon = new BitmapImage(new Uri(iconPath));
 	}
@@ -27,6 +32,18 @@ public partial class MainWindow : CustomChromeWindow
 		if (sender is Button button)
 		{
 			MessageBox.Show($"{button.Content} clicked");
+		}
+	}
+
+	private void Theme_Click(object sender, RoutedEventArgs e)
+	{
+		if (this.TitlebarBackground == _initialTitlebarBackground)
+		{
+			this.TitlebarBackground = Brushes.Fuchsia;
+		}
+		else
+		{
+			this.TitlebarBackground = _initialTitlebarBackground;
 		}
 	}
 }
